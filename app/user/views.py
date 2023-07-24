@@ -13,7 +13,7 @@ class CreateUserView(generics.CreateAPIView):
     serializer_class = UserSerializer
 
 
-class ManageUserView(generics.CreateAPIView):
+class ManageUserView(generics.RetrieveUpdateAPIView):
     """Manage the authed user"""
     serializer_class = UserSerializer
     authentication_classes = [authentication.TokenAuthentication]
